@@ -1,4 +1,4 @@
-function calsPerDay() {
+function calsPerDay {
   function find(id) { return document.getElementById(id) }
 
   var age = find("age").value
@@ -11,4 +11,3 @@ function calsPerDay() {
     result = 665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))
   find("totalCals").innerHTML = Math.round( result )
 }
-calsPerDay()
