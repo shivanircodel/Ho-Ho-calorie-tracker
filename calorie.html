@@ -1,26 +1,64 @@
-<!DOCTYPE html>
-<html>
-<h1>Fill out the form below.</h1>
-<label>Female:
-  <input id="female" type="radio" name="gender" onchange="calsPerDay()">
-</label>
-<label>Male:
-  <input id="male" type="radio" name="gender" onchange="calsPerDay()" checked>
-</label>
-<label>Age:
-  <input id="age" type="number" oninput="calsPerDay()" value="50">
-  years
-</label>
-<label>Height:
-  <input id="height" type="number" oninput="calsPerDay()" value="70">
-  in inches (12 inches=1 foot)
-</label>
-<label>Weight:
-  <input id="weight" type="number" oninput="calsPerDay()" value="225">
-  in pounds
-</label>
-<label>
-  Base metabolic rate: <span id="totalCals"></span> kcal per day
-</label>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Meal & Calorie Tracker</title>
+</head>
+<body>
 
-</html>
+  <nav>
+    <div class="nav-wrapper red">
+      <div class="container">
+        <a href="#" class="brand-logo left">Ho-Ho Calorie Tracker</a>
+        <ul class="right">
+          <li><a href="#" class="clear-btn btn blue">Clear All</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Add Food</span>
+        <form class="col">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" placeholder="Add Item" id="item-name">
+              <label for="item-name">Food</label>
+            </div>
+            <div class="input-field col s6">
+                <input type="number" placeholder="Add Calories" id="item-calories">
+                <label for="item-calories">Calories</label>
+            </div>
+            <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i> Add Meal</button>         
+            <button class="update-btn btn orange"><i class="fa fa-pencil-square-o"></i> Update Meal</button>
+            <button class="delete-btn btn red"><i class="fa fa-remove"></i> Delete Meal</button>
+            <button class="back-btn btn grey pull-right"><i class="fa fa-chevron-circle-left"></i> Back</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Calorie Count -->
+    <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
+
+    <!-- Item List -->
+    <ul id="item-list" class="collection">
+
+    </ul>
+  </div>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="script.js"></script>    
+  <script src="app.js"></script>
+</body>
+
